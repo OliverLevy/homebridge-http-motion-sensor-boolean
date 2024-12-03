@@ -51,6 +51,25 @@ MotionSensorAccessory.prototype = {
                                         data += chunk;
                                 });
                                 resp.on('end', () => {
+                                        if (data === 'false') {
+                                                callback(parseInt(0));
+                                                return;
+                                        }
+                                        
+                                        if (data === 'true') {
+                                                callback(parseInt(1));
+                                                return;
+                                        }
+
+                                        if(data === false) {
+                                                callback(parseInt(0));
+                                                return;
+                                        }
+                                        if(data === true) {
+                                                callback(parseInt(0));
+                                                return;
+                                        }
+
                                         callback(parseInt(data));
                                 });
                         }).on("error", (err) => {

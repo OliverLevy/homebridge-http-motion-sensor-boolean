@@ -1,7 +1,7 @@
 # homebridge-http-motion-sensor
 
 This is a plugin for homebridge which can monitor a motion sensor via a HTTP endpoint.
-The endpoint shall return a 0 or 1 value depending on the sensor state.
+The endpoint shall return a 0 or 1 value, `true` or `false`, "true" or "false" depending on the sensor state.
 
 This project is heavily inspired by cyakimov's [homebridge-http-contact-sensor](https://github.com/cyakimov/homebridge-http-contact-sensor)
 
